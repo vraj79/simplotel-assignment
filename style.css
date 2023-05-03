@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Roboto:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* navbar css */
+
+nav {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+nav li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.navText ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navIcons ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#hamburger {
+  display: none;
+}
+
+#navItems {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* first section css */
+
+.firstPart {
+  position: relative;
+  height: 115vh;
+  background: linear-gradient(
+    109.6deg,
+    rgb(255, 118, 205) 11.2%,
+    rgb(248, 238, 103) 91.1%
+  );
+}
+
+.firstPart img {
+  height: 100vh;
+}
+
+.imgText {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  background: rgb(250, 111, 134);
+  color: white;
+  opacity: 0.8;
+  padding: 2.5rem;
+  width: 45%;
+}
+
+.imgHeading {
+  opacity: 1;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+.imgPtext {
+  opacity: 0.8;
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  padding-right: 2.5rem;
+}
+
+/* order part css */
+
+.orderNowPart {
+  height: 100vh;
+  background: linear-gradient(
+    109.6deg,
+    rgb(255, 118, 205) 11.2%,
+    rgb(248, 238, 103) 91.1%
+  );
+  text-align: center;
+}
+
+.orderHeading {
+  font-size: 3rem;
+  letter-spacing: 6px;
+  color: #fff;
+}
+
+.orderBoxes {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+.orderBox {
+  background: #fff;
+  padding: 1.5rem;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+}
+
+.orderBox img {
+  border-top-right-radius: 20%;
+  height: 250px;
+}
+
+.orderBox h3 {
+  margin: 1rem 0;
+}
+
+.orderBtn {
+  border: none;
+  padding: 1rem 4rem;
+  border-radius: 100px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: rgb(255, 202, 211);
+}
+
+/* navbar media query */
+@media screen and (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  #hamburger img {
+    height: 30px;
+    width: 30px;
+  }
+
+  nav {
+    align-items: center;
+  }
+
+  .navText {
+    display: none;
+  }
+
+  #navItems {
+    margin-bottom: 1rem;
+  }
+
+  #navItems ul {
+    display: grid;
+    gap: 1rem;
+    padding-left: 2.5rem;
+  }
+}
+
+/* first section media query */
+@media screen and (max-width: 768px) {
+  .imgText {
+    width: 50%;
+  }
+
+  .imgHeading {
+    font-size: 2.2rem;
+  }
+
+  .imgPtext {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .imgHeading {
+    font-size: 1rem;
+  }
+
+  .imgPtext {
+    font-size: 0.6rem;
+  }
+}
+
+/* order now media queries */
+@media screen and (max-width: 768px) {
+  .orderNowPart {
+    height: auto;
+  }
+
+  .orderBoxes {
+    height: auto;
+    margin-top: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .orderBtn {
+    margin: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .orderBoxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
